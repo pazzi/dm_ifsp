@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.php">IFSP - Cursos de graduação</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mynavbar">
+      <ul class="navbar-nav me-auto">
+      {if $user != "user"}
+        <li class="nav-item">
+          <a class="nav-link" href="inicio.php">Bolachão</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="musico_inicio.php">Músico</a>
+        </li>
+	{/if}
+        <li class="nav-item">
+          <a class="nav-link" href="session.php">Admin</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="sobre.php">Sobre</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="inicio.php">Busca</a>
+        </li>
+      </ul>
+      {if $user != "user"}
+      <form class="d-flex" method="POST" action="inicio.php">
+      {else}
+      <form class="d-flex" method="POST" action="index.php">
+      {/if}
+        <input class="form-control me-2" type="text" placeholder="Search" name="nome">
+	<button type="submit" class="btn btn-primary" name="submit">Buscar</button>
+      </form>
+    </div>
+  </div>
+</nav>
+

@@ -1,0 +1,7 @@
+# Dev
+phpunit*
+.phpunit.result.cache
+vendor/*
+cache/*
+templates_c/*
+composer.lock
