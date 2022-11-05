@@ -3,7 +3,7 @@ error_reporting(0);
 session_start();
 require 'config/config.php';
 include("db.php");
-$uploaddir = './fotos/';
+#$uploaddir = './fotos/';
 
 if(isset($_POST['submit']))
 {
