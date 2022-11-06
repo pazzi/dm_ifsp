@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.0.3, created on 2022-11-05 19:13:10
+/* Smarty version 4.0.3, created on 2022-11-05 22:33:02
   from '/home/carlos/projetos/dm_ifsp/templates/nav.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.0.3',
-  'unifunc' => 'content_6366dff6464b48_71270001',
+  'unifunc' => 'content_63670ecebce629_80792685',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8522b63a26f8e7e49bed2d05b30c306ff2a806bd' => 
     array (
       0 => '/home/carlos/projetos/dm_ifsp/templates/nav.tpl',
-      1 => 1667686259,
+      1 => 1667698303,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6366dff6464b48_71270001 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63670ecebce629_80792685 (Smarty_Internal_Template $_smarty_tpl) {
 ?><nav class="navbar navbar-expand-sm navbar-dark bg-dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="index.php">IFSP - Cursos de graduação</a>
