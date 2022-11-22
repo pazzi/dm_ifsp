@@ -2,15 +2,11 @@
 {include file="nav.tpl"}
 
 <div class="container mt-3">
-    <div class="row row-cols-2">
-        <div class="col">Curso</div>
-        <div class="col">Tipo</div>
-    </div>
     {section name=i loop=$dados}
-        <div class="row row-cols-2">
-            <div class="col">{$dados[i].MUNICIPIO}</div>
-            <div class="col"> {$dados[i].TIPO_DE_PERIODICIDADE}</div>
-        </div>
+            <div class="row">{$dados[i].NOME_DO_CURSO} - {$dados[i].MUNICIPIO}</div>
+            <div class="row">{$dados[i].GRAU} - {$dados[i].TIPO_DE_PERIODICIDADE} - {$dados[i].MODALIDADE}</div>
+            <div class="row">{$dados[i].CARGA_HORARIA} - {$dados[i].TIPO_DE_PERIODICIDADE} - {$dados[i].ANO_CC}</div>
+            <hr>
     {/section}
 </div>
 

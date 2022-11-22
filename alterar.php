@@ -1,12 +1,11 @@
 <?php
 require 'config/config.php';
 include("db.php");
-$uploaddir='./fotos/';
 
 try {
 
 $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-$stmt = $dbh->prepare("select * from bolachao where id = ? " );
+$stmt = $dbh->prepare("select * from cadastro where id = ? " );
 $stmt->bindParam(1, $id);
 
 $id = $_GET["id"];
@@ -26,7 +25,7 @@ try {
         include("conexao.php");
         
                 $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                $stmt = $dbh->prepare("update bolachao set nome=?, selo=?, ano=? where id = ?");
+                $stmt = $dbh->prepare("update cadastro set nome=?, selo=?, ano=? where id = ?");
                 $stmt->bindParam(1, $nome);
                 $stmt->bindParam(2, $selo);
                 $stmt->bindParam(3, $ano);
@@ -55,7 +54,6 @@ if(isset($_POST['cancel'])){
 
 $smarty->assign('msg',$msg);
 $smarty->assign('dados',$res);
-$smarty->assign('uploaddir', $uploaddir);
 $smarty->display('alterar.tpl');
 
 

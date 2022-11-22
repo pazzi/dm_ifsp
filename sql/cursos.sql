@@ -12,13 +12,8 @@ START TRANSACTION;
 SET time_zone = "+00:00";
 
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
 --
--- Banco de dados: `ifsp`
+-- Banco de dados: `dm_ifsp`
 --
 
 -- --------------------------------------------------------
@@ -28,67 +23,67 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `cursos` (
-  `CODIGO_DA_IES` varchar(10) DEFAULT NULL,
-  `NOME_DA_IES` varchar(100) DEFAULT NULL,
-  `SITUACAO_DA_IES` varchar(10) DEFAULT NULL,
-  `CODIGO_DO_CURSO` varchar(10) DEFAULT NULL,
-  `NOME_DO_CURSO` varchar(100) DEFAULT NULL,
-  `DATA_DE_CADASTRO_DO_CURSO` date DEFAULT NULL,
-  `GRAU` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `CODIGO_CINE_ROTULO` varchar(20) DEFAULT NULL,
-  `CINE_ROTULO` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `MODALIDADE` varchar(35) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `SITUACAO_DO_CURSO` varchar(15) DEFAULT NULL,
-  `QT_VAGAS_AUTORIZADAS` varchar(35) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `CARGA_HORARIA` varchar(5) DEFAULT NULL,
-  `CARGA_HORARIA_DISTANCIA` varchar(5) DEFAULT NULL,
-  `CARGA_HORARIA_ESTAGIO` varchar(5) DEFAULT NULL,
-  `CARGA_HORARIA_ATIV_COMPLEMENTARES` varchar(5) DEFAULT NULL,
-  `CARGA_HORARIA_TCC` varchar(5) DEFAULT NULL,
-  `CARGA_HORARIA_LIBRAS` varchar(5) DEFAULT NULL,
-  `TIPO_DE_PERIODICIDADE` varchar(15) DEFAULT NULL,
-  `QUANT_PERIODICIDADE_INTEGRAL` varchar(5) DEFAULT NULL,
-  `QUANT_DE_VAGAS_INTEGRAL` varchar(5) DEFAULT NULL,
-  `QUANT_PERIODICIDADE_MATUTINO` varchar(5) DEFAULT NULL,
-  `QUANT_DE_VAGAS_MATUTINO` varchar(5) DEFAULT NULL,
-  `QUANT_PERIODICIDADE_VESPERTINO` varchar(5) DEFAULT NULL,
-  `QUANT_DE_VAGAS_VESPERTINO` varchar(5) DEFAULT NULL,
-  `QUANT_PERIODICIDADE_NOTURNO` varchar(5) DEFAULT NULL,
-  `QUANTIDADE_DE_VAGAS_NOTURNO` varchar(5) DEFAULT NULL,
-  `QUANT_PERIODICIDADE_NAO_SE_APLICA` varchar(5) DEFAULT NULL,
-  `QUANT_DE_VAGAS_NAO_SE_APLICA` varchar(5) DEFAULT NULL,
-  `CODIGO_DO_ENDERECO` varchar(15) DEFAULT NULL,
-  `ENDERECO` varchar(150) DEFAULT NULL,
-  `NUMERO_ENDERECO` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `COMPLEMENTO` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `BAIRRO` varchar(50) DEFAULT NULL,
-  `MUNICIPIO` varchar(50) DEFAULT NULL,
-  `UF` varchar(2) DEFAULT NULL,
-  `TIPO_DOC_AUTORIZACAO` varchar(20) DEFAULT NULL,
-  `DOCUMENTO_DE_AUTORIZACAO` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `DT_CONSIDERADA_AUTORIZACAO` varchar(10) DEFAULT NULL,
-  `DT_PUBLICACAO_AUTORIZACAO` varchar(10) DEFAULT NULL,
-  `DT_CADASTRO_AUTORIZACAO` varchar(10) DEFAULT NULL,
-  `TIPO_DOC_RECONHECIMENTO` varchar(20) DEFAULT NULL,
-  `DOCUMENTO_DE_CONHECIMENTO` varchar(50) DEFAULT NULL,
-  `DT_CONSIDERADA_RECONHECIMENTO` varchar(10) DEFAULT NULL,
-  `DT_PUBLICACAO_RECONHECIMENTO` varchar(10) DEFAULT NULL,
-  `DT_CADASTRO_RECONHECIMENTO` varchar(10) DEFAULT NULL,
-  `TIPO_DOC_RENOVACAO` varchar(20) DEFAULT NULL,
-  `DOC_ULTIMA_RENOVACAO` varchar(20) DEFAULT NULL,
-  `DT_CONSIDERADA_RENOVACAO` varchar(10) DEFAULT NULL,
-  `DT_PUBLICACAO_RENOVACAO` varchar(10) DEFAULT NULL,
-  `DT_CADASTRO_RENOVACAO` varchar(10) DEFAULT NULL,
-  `INICIO_FUNCIONAMENTO` varchar(10) DEFAULT NULL,
-  `PROCESSOS_EM_TRAMITACAO` varchar(50) DEFAULT NULL,
-  `VALOR_CC` varchar(10) DEFAULT NULL,
-  `ANO_CC` varchar(4) DEFAULT NULL,
-  `CPC_FAIXA` varchar(15) DEFAULT NULL,
-  `CPC_CONTINUO` varchar(15) DEFAULT NULL,
-  `CPC_ANO` varchar(4) DEFAULT NULL,
-  `VALOR_ENADE` varchar(2) DEFAULT NULL,
-  `ENADE_ANO` varchar(4) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `CODIGO_DA_IES` varchar(10),
+  `NOME_DA_IES` varchar(100),
+  `SITUACAO_DA_IES` varchar(10),
+  `CODIGO_DO_CURSO` varchar(10),
+  `NOME_DO_CURSO` varchar(100),
+  `DATA_DE_CADASTRO_DO_CURSO` date,
+  `GRAU` varchar(30) ,
+  `CODIGO_CINE_ROTULO` varchar(20),
+  `CINE_ROTULO` varchar(100) ,
+  `MODALIDADE` varchar(35) ,
+  `SITUACAO_DO_CURSO` varchar(15),
+  `QT_VAGAS_AUTORIZADAS` varchar(35) ,
+  `CARGA_HORARIA` varchar(5),
+  `CARGA_HORARIA_DISTANCIA` varchar(5),
+  `CARGA_HORARIA_ESTAGIO` varchar(5),
+  `CARGA_HORARIA_ATIV_COMPLEMENTARES` varchar(5),
+  `CARGA_HORARIA_TCC` varchar(5),
+  `CARGA_HORARIA_LIBRAS` varchar(5),
+  `TIPO_DE_PERIODICIDADE` varchar(15),
+  `QUANT_PERIODICIDADE_INTEGRAL` varchar(5),
+  `QUANT_DE_VAGAS_INTEGRAL` varchar(5),
+  `QUANT_PERIODICIDADE_MATUTINO` varchar(5),
+  `QUANT_DE_VAGAS_MATUTINO` varchar(5),
+  `QUANT_PERIODICIDADE_VESPERTINO` varchar(5),
+  `QUANT_DE_VAGAS_VESPERTINO` varchar(5),
+  `QUANT_PERIODICIDADE_NOTURNO` varchar(5),
+  `QUANTIDADE_DE_VAGAS_NOTURNO` varchar(5),
+  `QUANT_PERIODICIDADE_NAO_SE_APLICA` varchar(5),
+  `QUANT_DE_VAGAS_NAO_SE_APLICA` varchar(5),
+  `CODIGO_DO_ENDERECO` varchar(15),
+  `ENDERECO` varchar(150),
+  `NUMERO_ENDERECO` varchar(50),
+  `COMPLEMENTO` varchar(150),
+  `BAIRRO` varchar(50),
+  `MUNICIPIO` varchar(50),
+  `UF` varchar(2),
+  `TIPO_DOC_AUTORIZACAO` varchar(20),
+  `DOCUMENTO_DE_AUTORIZACAO` varchar(150),
+  `DT_CONSIDERADA_AUTORIZACAO` varchar(10),
+  `DT_PUBLICACAO_AUTORIZACAO` varchar(10),
+  `DT_CADASTRO_AUTORIZACAO` varchar(10),
+  `TIPO_DOC_RECONHECIMENTO` varchar(20),
+  `DOCUMENTO_DE_CONHECIMENTO` varchar(50),
+  `DT_CONSIDERADA_RECONHECIMENTO` varchar(10),
+  `DT_PUBLICACAO_RECONHECIMENTO` varchar(10),
+  `DT_CADASTRO_RECONHECIMENTO` varchar(10),
+  `TIPO_DOC_RENOVACAO` varchar(20),
+  `DOC_ULTIMA_RENOVACAO` varchar(20),
+  `DT_CONSIDERADA_RENOVACAO` varchar(10),
+  `DT_PUBLICACAO_RENOVACAO` varchar(10),
+  `DT_CADASTRO_RENOVACAO` varchar(10),
+  `INICIO_FUNCIONAMENTO` varchar(10),
+  `PROCESSOS_EM_TRAMITACAO` varchar(50),
+  `VALOR_CC` varchar(10),
+  `ANO_CC` varchar(4),
+  `CPC_FAIXA` varchar(15),
+  `CPC_CONTINUO` varchar(15),
+  `CPC_ANO` varchar(4),
+  `VALOR_ENADE` varchar(2),
+  `ENADE_ANO` varchar(4)  
+) ENGINE=InnoDB;
 
 --
 -- Despejando dados para a tabela `cursos`
@@ -282,8 +277,3 @@ INSERT INTO `cursos` (`CODIGO_DA_IES`, `NOME_DA_IES`, `SITUACAO_DA_IES`, `CODIGO
 ('1810', 'IFSP', 'Ativa', '1598277', 'LETRAS', '2022-01-24', 'Licenciatura', '0115L13', 'Letras portugues formacao de professor', 'Educacao Presencial', 'Em atividade', '40', '3280', '0', '0', '0', '0', '0', 'Semestral', '', '', '', '', '', '', '8.00', '40', '', '', '1085113', 'Rua Primeiro de Maio', '500', '', 'Estacao', 'Itaquaquecetuba', 'SP', 'Resolucao', '150', '2021-12-20', '2021-12-20', '2022-01-24', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
 ('1810', 'IFSP', 'Ativa', '1188377', 'ANALISE E DESENVOLVIMENTO DE SISTEMAS', '2012-10-01', 'Tecnologico', '0615S02', 'Sistemas de informacao', 'Educacao Presencial', 'Em atividade', '40', '2000', '0', '240', '80', '80', '33', 'Semestral', '', '', '', '', '', '', '6.00', '40', '', '', '1059392', 'Avenida Doutor Enio Pires de Camargo', '2971', 'IFSP - Campus Capivari', 'Sao Joao Batista', 'Capivari', 'SP', 'Resolucao', '907/2013', '2013-07-02', '2013-07-02', '2016-01-12', 'Portaria', '1039 de 2015-10-23', '2015-12-24', '2015-12-24', '2015-12-24', 'Portaria', '918', '2018-12-28', '2018-12-28', '2019-01-23', '2013-02-01', '', '4', '2015', '3', '288', '2017', '4', '2017'),
 ('1810', 'IFSP', 'Ativa', '1420587', 'ENGENHARIA DE ALIMENTOS', '2017-11-13', 'Bacharelado', '0721E01', 'Engenharia de alimentos', 'Educacao Presencial', 'Em atividade', '40', '3946', '0', '160', '100', '60', '32', 'Semestral', '', '', '', '', '', '', '10.00', '40', '', '', '1071868', 'Rua Stefano DAvassi', '625', '', 'Nova Cidade', 'Matao', 'SP', 'Resolucao', '105 de 2017-10-31', '2017-10-31', '2017-10-31', '2017-11-13', '', '', '', '', '', '', '', '', '', '', '2018-02-07', '202118085', '', '', '', '', '', '', '');
-COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

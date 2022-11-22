@@ -2,25 +2,24 @@
 {include file="nav.tpl"}
 
 <div class="container mt-3">
-<h4>Editar - Bolachão</h4>
+<h4>Editar - Cursos</h4>
 
-<img class="rounded img-fluid" width="150px" src="{$uploaddir}/{$dados[0].caminho_foto}"></img>
 <form method="POST" action="alterar.php">
 <input type="hidden" name="id" value="{$dados[0].id}">
 
 <div class="mb-3 mt-3">
-  Nome:
-  <input type="text" class="form-control" name="nome" value="{$dados[0].nome}">
+  Curso:
+  <input type="text" class="form-control" name="nome" value="{$dados[0].NOME_DO_CURSO}">
 </div>
 
 <div class="mb-3 mt-3">
-  Selo:
-  <input type="text" class="form-control" name="selo" value="{$dados[0].selo}">
+  Grau:
+  <input type="text" class="form-control" name="grau" value="{$dados[0].GRAU}">
 </div>
 
 <div class="mb-3 mt-3">
-  Ano:
-  <input type="text" class="form-control" name="ano" value="{$dados[0].ano}">
+  Município:
+  <input type="text" class="form-control" name="municipio" value="{$dados[0].MUNICIPIO}">
 </div>
 
   <input type="submit" class="btn btn-primary" name="submit" value="Salvar">

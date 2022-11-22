@@ -8,10 +8,7 @@
       <ul class="navbar-nav me-auto">
       {if $user != "user"}
         <li class="nav-item">
-          <a class="nav-link" href="inicio.php">Bolachão</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="musico_inicio.php">Músico</a>
+          <a class="nav-link" href="index.php">Cursos</a>
         </li>
 	{/if}
         <li class="nav-item">
@@ -21,7 +18,7 @@
           <a class="nav-link" href="sobre.php">Sobre</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="inicio.php">Busca</a>
+          <a class="nav-link" href="index.php">Busca</a>
         </li>
       </ul>
       {if $user != "user"}
