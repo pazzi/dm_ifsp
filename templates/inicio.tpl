@@ -2,6 +2,9 @@
 {include file="nav.tpl"}
 
 Usuário autorizado <br>
+<ul>
+<li><a href="municipios.php">Municípios</li>
+</ul>
 
 <div class="container mt-3">
 <div>

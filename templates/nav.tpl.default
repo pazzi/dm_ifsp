@@ -24,7 +24,11 @@
           <a class="nav-link" href="index.php">Busca</a>
         </li>
       </ul>
-      <form class="d-flex" method="POST" action="{$page}">
+      {if $user != "user"}
+      <form class="d-flex" method="POST" action="inicio.php">
+      {else}
+      <form class="d-flex" method="POST" action="index.php">
+      {/if}
         <input class="form-control me-2" type="text" placeholder="Search" name="nome">
 	<button type="submit" class="btn btn-primary" name="submit">Buscar</button>
       </form>

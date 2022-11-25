@@ -38,17 +38,24 @@ if(isset($_GET['id'])){
 
 if(isset($_POST['submit']))
 {
-	$dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-	$sth = $dbh->prepare('SELECT * FROM cadastro where id like ? ORDER BY id');
-	$sth->bindParam(1, $nome);
 	$nome = "%".$_POST["nome"]."%";
+	$dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $sth = $dbh->prepare('SELECT c.id, c.NOME_DO_CURSO,c.GRAU, m.MUNICIPIO
+                                FROM cadastro c, municipios m 
+                                WHERE c.NOME_DO_CURSO LIKE ? 
+                                AND c.CODIGO_DO_ENDERECO=m.CODIGO_DO_ENDERECO 
+                                ORDER BY c.NOME_DO_CURSO');
+	$sth->bindParam(1, $nome);
 	$sth->execute();
 	$result = $sth->fetchAll(PDO::FETCH_ASSOC);
 }
 else{
 	try {
 		$dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-		$sth = $dbh->prepare('SELECT * FROM cadastro ORDER BY NOME_DO_CURSO');
+        $sth = $dbh->prepare('SELECT c.id, c.NOME_DO_CURSO,c.GRAU, m.MUNICIPIO
+                                FROM cadastro c, municipios m 
+                                WHERE c.CODIGO_DO_ENDERECO=m.CODIGO_DO_ENDERECO 
+                                ORDER BY c.NOME_DO_CURSO');
 		$sth->execute();
 		$result = $sth->fetchAll(PDO::FETCH_ASSOC);
 
@@ -59,5 +66,6 @@ else{
 	}
 }
 $smarty->assign('dados', $result);
+$smarty->assign('page', $_SERVER['PHP_SELF']);
 $smarty->display('inicio.tpl');
 

@@ -6,12 +6,11 @@
 <table class="table">
 <thead><tr>
         <th>Curso</th>
-        <th>Tipo</th>
+        </tr>
     <form method="post" action="mostra_cursos.php">
     {section name=i loop=$dados}
         <tr>
-            <td><button type="submit" class="btn btn-light" name="linha" value="{$dados[i].rotulo}">{$dados[i].nome}</button></td>
-            <td> {$dados[i].grau}</td>
+            <td><a href='.\mostra_cursos.php?rotulo={$dados[i].rotulo}' class="text-decoration-none link-dark">{$dados[i].nome}</a></td>
         </tr>
     {/section}
     </form>
