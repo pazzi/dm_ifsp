@@ -24,5 +24,7 @@ if(isset($_GET['grau']))
 */
 
 $smarty->assign('dados', $result);
+$smarty->assign('pagina', $_SERVER['PHP_SELF']);
+$smarty->assign('nav', 0);
 $smarty->display('mostra_cidade.tpl');
 
