@@ -16,7 +16,7 @@ session.php
 	inicio.php
 			cadastro.php [novo]
 			inicio.php[excluir]
-			alterar.php[alterar]
+			alterar_curso.php[alterar]
 			
 		municipios.php [link]
 			cad_municipio.php[novo]
@@ -34,8 +34,10 @@ index_cidade.php
 	mostra_cidade.php
 </pre>
 			
-		
-
+   <h4>Esquema do Banco de dados</h4>
+<img src="/docs/schema.png"></img> 
+<h4>Fontes</h4>
+Fontes em <a href="github.com/pazzi/dm_ifsp">github.com/pazzi/dm_ifsp</a>
 </div>
 
 {include file="footer.tpl"}
