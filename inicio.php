@@ -1,9 +1,10 @@
 <?php
 error_reporting(0);
-session_start();
+#session_start();
 require 'config/config.php';
 include("db.php");
 
+/*
 if(empty($_SESSION['username']) AND empty($_SESSION['passwd'])){
 
     header ("Location:session.php");
@@ -17,14 +18,14 @@ if(empty($_SESSION['username']) AND empty($_SESSION['passwd'])){
 	}
 
 }
+*/
 
 if(isset($_GET['id'])){
 	 try {
                 $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                $stmt = $dbh->prepare("delete from bolachao where id = ?");
+                $stmt = $dbh->prepare("delete from cadastro where id = ?");
                 $stmt->bindParam(1, $id);
                 $id = $_GET["id"];
-
                 if($stmt->execute())
     			header("location:inicio.php");
 
@@ -66,6 +67,6 @@ else{
 	}
 }
 $smarty->assign('dados', $result);
-$smarty->assign('page', $_SERVER['PHP_SELF']);
+$smarty->assign('pagina', $_SERVER['PHP_SELF']);
 $smarty->display('inicio.tpl');
 

@@ -1,7 +1,6 @@
 {include file="header.tpl"}
 {include file="nav.tpl"}
 
-Usuário autorizado <br>
 <ul>
 <li><a href="municipios.php">Municípios</li>
 </ul>
@@ -22,7 +21,7 @@ Usuário autorizado <br>
 		<td> {$dados[i].GRAU}</td>
 		<td> {$dados[i].MUNICIPIO}</td>
 	        <td><a href='inicio.php?id={$dados[i].id}'><i class="bi-eraser"></i></a></td>                     
-        	<td><a href='alterar.php?id={$dados[i].id}'><i class="bi-pen"></i></a></td>  
+        	<td><a href='alterar_curso.php?id={$dados[i].id}'><i class="bi-pen"></i></a></td>  
 	</tr>
 {/section}
 </table>

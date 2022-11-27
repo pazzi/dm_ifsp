@@ -6,14 +6,15 @@
     </button>
     <div class="collapse navbar-collapse" id="mynavbar">
       <ul class="navbar-nav me-auto">
-      {if $user != "user"}
+      {if $usuario != "user"}
         <li class="nav-item">
           <a class="nav-link" href="index.php">Cursos</a>
         </li>
-	{/if}
         <li class="nav-item">
           <a class="nav-link" href="index_cidade.php">Cidades</a>
         </li>
+      {/if}
+
         <li class="nav-item">
           <a class="nav-link" href="session.php">Admin</a>
         </li>
@@ -24,10 +25,14 @@
           <a class="nav-link" href="index.php">Busca</a>
         </li>
       </ul>
-      <form class="d-flex" method="POST" action="{$page}">
-        <input class="form-control me-2" type="text" placeholder="Search" name="nome">
-	<button type="submit" class="btn btn-primary" name="submit">Buscar</button>
-      </form>
+
+      {if $nav != "0"}
+        <form class="d-flex" method="POST" action="{$pagina}">
+          <input class="form-control me-2" type="text" placeholder="Search" name="nome">
+	        <button type="submit" class="btn btn-primary" name="submit">Buscar</button>
+        </form>
+	{/if}
+
     </div>
   </div>
 </nav>

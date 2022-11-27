@@ -1,5 +1,8 @@
 {include file="header.tpl"}
 {include file="nav.tpl"}
+<ul>
+<li><a href="./inicio.php">Cadastro de cursos</a>
+</ul>
 
 <div class="container mt-3">
 <div>

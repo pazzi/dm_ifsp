@@ -40,8 +40,8 @@
   <input type="hidden" class="form-control" name="uf" value="SP">
 </div>
 
-  <input type="submit" class="btn btn-primary" name="submit" value="Salvar">
-  <input type="submit" class="btn btn-warning" name="cancel" value="Cancelar">
+<input type="submit" class="btn btn-primary" name="submit" value="Salvar">
+<a class="btn btn-warning" href="./municipios.php" role="button">Voltar</a>
 </form> 
 </div>
 

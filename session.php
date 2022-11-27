@@ -1,13 +1,13 @@
 <?php
 error_reporting(0);
-session_start();
+#session_start();
 require 'config/config.php';
 
 if($_POST['login']=="Login"){
 if(($_POST['username'] == "admin")  AND ($_POST['passwd'] == "xxx"))
 {
-    $_SESSION["username"] = $_POST['username'];
-    $_SESSION["passwd"] = $_POST['passwd'];
+    #$_SESSION["username"] = $_POST['username'];
+    #$_SESSION["passwd"] = $_POST['passwd'];
     header("Location:inicio.php");
 }
 else{
