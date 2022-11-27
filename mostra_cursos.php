@@ -22,7 +22,8 @@ if(isset($_GET['grau']))
 	$result = $sth->fetchAll(PDO::FETCH_ASSOC);
 }
 */
-
 $smarty->assign('dados', $result);
+$smarty->assign('pagina', $_SERVER['PHP_SELF']);
+$smarty->assign('nav', 0);
 $smarty->display('mostra_cursos.tpl');
 
